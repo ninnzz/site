@@ -78,7 +78,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
                     controller: 'CareerCtrl'
                 }
             }
-        })
+        })/*
         .state('dashboard', {
             url: '/dashboard',
             views: {
@@ -91,12 +91,16 @@ app.config(function($stateProvider, $urlRouterProvider) {
                     controller: 'DashboardCtrl'
                 }
             }
-        })
-        .state('dashboard.inbox', {
-            url: '/inbox',
+        })*/
+        .state('dashboard', {
+            url: '/dashboard',
             views: {
-                'dashboardView': {
-                    templateUrl: 'views/dashboard-inbox.html',
+                'mainView': {
+                    templateUrl: 'views/dashboard/dashboard.html',
+                    controller: 'DashboardCtrl'
+                },
+                'dashboardView@dashboard': {
+                    templateUrl: 'views/dashboard/dashboard-inbox.html',
                     controller: 'DashboardCtrl'
                 }
             }
@@ -105,7 +109,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/schedule',
             views: {
                 'dashboardView': {
-                    templateUrl: 'views/dashboard-schedule.html',
+                    templateUrl: 'views/dashboard/dashboard-schedule.html',
                     controller: 'DashboardCtrl'
                 }
             }
@@ -114,7 +118,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/news',
             views: {
                 'dashboardView': {
-                    templateUrl: 'views/dashboard-news.html',
+                    templateUrl: 'views/dashboard/dashboard-news.html',
                     controller: 'DashboardCtrl'
                 }
             }
@@ -123,7 +127,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
             url: '/ships',
             views: {
                 'dashboardView': {
-                    templateUrl: 'views/dashboard-ships.html',
+                    templateUrl: 'views/dashboard/dashboard-ships.html',
                     controller: 'DashboardCtrl'
                 }
             }
@@ -159,10 +163,12 @@ app.run(['$state', '$route', '$rootScope', '$location', function($state, $route,
  */
 angular.module('project1App')
   .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
+    $scope.featuredNews = [
+      {img:'images/schedule.jpg',title:'Title of the News',desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper elementum massa. Aliquam cursus laoreet dolor, ac ullamcorper diam ullamcorper vestibulum. Etiam risus massa, dapibus a commodo pharetra, imperdiet sit amet metus. '},
+      {img:'images/schedule.jpg',title:'Title of the News',desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper elementum massa. Aliquam cursus laoreet dolor, ac ullamcorper diam ullamcorper vestibulum. Etiam risus massa, dapibus a commodo pharetra, imperdiet sit amet metus. '},
+      {img:'images/schedule.jpg',title:'Title of the News',desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper elementum massa. Aliquam cursus laoreet dolor, ac ullamcorper diam ullamcorper vestibulum. Etiam risus massa, dapibus a commodo pharetra, imperdiet sit amet metus. '},
+      {img:'images/schedule.jpg',title:'Title of the News',desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper elementum massa. Aliquam cursus laoreet dolor, ac ullamcorper diam ullamcorper vestibulum. Etiam risus massa, dapibus a commodo pharetra, imperdiet sit amet metus. '},
+      {img:'images/schedule.jpg',title:'Title of the News',desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper elementum massa. Aliquam cursus laoreet dolor, ac ullamcorper diam ullamcorper vestibulum. Etiam risus massa, dapibus a commodo pharetra, imperdiet sit amet metus. '}
     ];
   });
 
@@ -178,9 +184,9 @@ angular.module('project1App')
 angular.module('project1App')
   .controller('AboutCtrl', function ($scope) {
     $scope.vessels = [
-    	{name: 'Name of Vessel',img:'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg', details: 'Here is some more information about this vessl that is only revealed once clicked on.'},
-    	{name: 'Name of Vessel',img:'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg', details: 'Here is some more information about this vessl that is only revealed once clicked on.'},
-    	{name: 'Name of Vessel',img:'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg', details: 'Here is some more information about this vessl that is only revealed once clicked on.'}
+    	{name: 'Name of Vessel',img:'images/vessel1.jpg', details: 'Here is some more information about this vessl that is only revealed once clicked on.'},
+    	{name: 'Name of Vessel',img:'images/vessel2.jpg', details: 'Here is some more information about this vessl that is only revealed once clicked on.'},
+    	{name: 'Name of Vessel',img:'images/vessel3.jpg', details: 'Here is some more information about this vessl that is only revealed once clicked on.'}
     ];
   });
 
@@ -256,15 +262,10 @@ angular.module('project1App')
 
 angular.module('project1App')
     .controller('DashboardSideNavCtrl', function($scope) {
-        $scope.dashboardLinkList = [{
+        $scope.dashboardLinkList = [ {
             link: 'dashboard',
-            title: 'Home',
-            className: 'dashboard',
-            icon: 'home'
-        }, {
-            link: 'dashboard.inbox',
             title: 'Inbox',
-            className: 'dashboard/inbox',
+            className: 'dashboard',
             icon: 'inbox'
         }, {
             link: 'dashboard.schedule',
@@ -506,7 +507,33 @@ angular.module('project1App')
             }]
         };
     });
+/*
+Regular Daily Schedule
+Lucena - Balanacan
+2:30 Am
+10:30 am
+3:30 pm
+11:30 pm
 
+
+Bal - Luc
+6:30am
+11:30am
+2:30pm
+7:30pm
+
+
+
+
+Fare
+Regular 260php
+Student 221php
+Senior citizen 186php
+Half-fare 130php
+Discounted Rate 208php
+Super Promo 50php
+
+*/
 'use strict';
 
 /**
@@ -667,7 +694,7 @@ angular.module('project1App')
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
-            route: 'Lucena',
+            route: 'Route 1',
             reg: '100',
             stud: '80',
             sen: '70'
@@ -676,7 +703,7 @@ angular.module('project1App')
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
-            route: 'Lucena',
+            route: 'Route 2',
             reg: '100',
             stud: '80',
             sen: '70'
@@ -685,7 +712,7 @@ angular.module('project1App')
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
-            route: 'Lucena',
+            route: 'Route 3',
             reg: '100',
             stud: '80',
             sen: '70'
@@ -694,7 +721,7 @@ angular.module('project1App')
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
-            route: 'Lucena',
+            route: 'Route 4',
             reg: '100',
             stud: '80',
             sen: '70'
@@ -703,7 +730,7 @@ angular.module('project1App')
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
-            route: 'Lucena',
+            route: 'Route 5',
             reg: '100',
             stud: '80',
             sen: '70'
