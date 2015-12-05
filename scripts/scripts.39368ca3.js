@@ -690,7 +690,7 @@ angular.module('project1App')
             position: 'Career 1'
         }];
         $scope.schedList = [{
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
@@ -699,7 +699,7 @@ angular.module('project1App')
             stud: '80',
             sen: '70'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
@@ -708,7 +708,7 @@ angular.module('project1App')
             stud: '80',
             sen: '70'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
@@ -717,7 +717,7 @@ angular.module('project1App')
             stud: '80',
             sen: '70'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
@@ -726,7 +726,7 @@ angular.module('project1App')
             stud: '80',
             sen: '70'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             time: '1:00PM',
             appro: '2hrs',
@@ -736,27 +736,27 @@ angular.module('project1App')
             sen: '70'
         }];
         $scope.shipList = [{
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             dimen: '(1,201 ft) x (161 ft) x 15.2 metres (50 ft).'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             dimen: '(1,201 ft) x  161 ft) x 15.2 metres (50 ft).'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             dimen: '(1,201 ft) x  161 ft) x 15.2 metres (50 ft).'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             dimen: '(1,201 ft) x  161 ft) x 15.2 metres (50 ft).'
         }, {
-            img: 'http://www.blog.beldensolutions.com/wp-content/uploads/Cargo-Ship-Image.jpg',
+            img: 'images/vessel1.jpg',
             name: 'B1',
             desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             dimen: '(1,201 ft) x  161 ft) x 15.2 metres (50 ft).'
